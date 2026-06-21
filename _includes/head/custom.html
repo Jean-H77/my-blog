@@ -75,10 +75,38 @@
     color: var(--accent-hover) !important;
   }
 
-  /* Layout Spacing */
+  /* Layout Spacing (Full Screen Width) */
   #main {
     padding-top: 2.5em !important;
-    max-width: 1280px !important;
+    max-width: 100% !important;
+    padding-left: 4% !important;
+    padding-right: 4% !important;
+  }
+
+  /* Widescreen Desktop Grid Override */
+  @media (min-width: 64em) {
+    #main {
+      display: flex !important;
+      align-items: flex-start !important;
+      justify-content: space-between !important;
+      gap: 40px !important;
+    }
+
+    .sidebar {
+      float: none !important;
+      width: 250px !important;
+      min-width: 250px !important;
+      margin-right: 0 !important;
+    }
+
+    .archive, .page {
+      float: none !important;
+      width: 100% !important;
+      flex-grow: 1 !important;
+      padding-right: 0 !important;
+      padding-inline-end: 0 !important;
+      margin-top: 0 !important;
+    }
   }
 
   /* Sidebar clean flat overrides */
@@ -91,6 +119,33 @@
     padding: 0 !important;
     box-shadow: none !important;
     margin-bottom: 2em !important;
+  }
+
+  /* Mobile and Tablet Sidebar Stack */
+  @media (max-width: 64em) {
+    #main {
+      display: block !important;
+    }
+    .sidebar {
+      display: block !important;
+      width: 100% !important;
+      position: static !important;
+      margin-bottom: 1.5em !important;
+      padding: 0 10px !important;
+    }
+    .archive, .page {
+      width: 100% !important;
+      padding-right: 0 !important;
+      padding-inline-end: 0 !important;
+    }
+    /* Force theme to display categories list on mobile viewports */
+    .nav__list .nav__items {
+      max-height: none !important;
+      opacity: 1 !important;
+      overflow: visible !important;
+      transform: none !important;
+      display: block !important;
+    }
   }
 
   /* Category details styling */
@@ -106,7 +161,7 @@
     color: var(--text-color) !important;
     outline: none !important;
     display: flex !important;
-    justify-content: space-between;
+    justify-content: flex-start !important;
     align-items: center;
     padding: 8px 12px !important;
     border-radius: 8px !important;
@@ -181,6 +236,7 @@
     border-radius: 9999px !important;
     color: var(--badge-color) !important;
     font-weight: 600 !important;
+    margin-left: auto !important;
   }
 
   /* Recent Posts Title */
