@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Classic Fluffy Pancakes"
-date: 2026-06-21 10:00:00 -0700
+date: 2026-06-20 10:00:00 -0700
 categories: recipes
 ---
 Here is a quick recipe for the best classic fluffy pancakes:

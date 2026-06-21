@@ -1,7 +1,7 @@
 ---
 layout: single
 title: "Understanding Git Branching"
-date: 2026-06-22 12:00:00 -0700
+date: 2026-06-20 12:00:00 -0700
 categories: tech
 ---
 Git branches are incredibly lightweight. A branch in Git is simply a lightweight movable pointer to one of these commits.
