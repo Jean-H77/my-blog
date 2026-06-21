@@ -12,37 +12,37 @@
 
   /* Theme variables definition */
   html.theme-dark {
-    --bg-color: #2b2b2b; /* IntelliJ Darcula Editor Background */
-    --card-bg: #313335; /* IntelliJ Tool Window / Inner Background */
-    --text-color: #a9b7c6; /* IntelliJ Darcula Text */
-    --text-title: #ffffff; /* IntelliJ active/white text */
-    --text-muted: #808080; /* IntelliJ grey comments */
-    --border-color: #4c5052; /* IntelliJ grid/border grey */
-    --accent-color: #589df6; /* IntelliJ accent blue */
-    --accent-hover: #72a7f8;
-    --sidebar-bg: #3c3f41; /* IntelliJ tool window background */
-    --badge-bg: rgba(88, 157, 246, 0.12);
-    --badge-color: #589df6;
-    --code-bg: #232323; /* IntelliJ darker code editor bg */
-    --code-inline-bg: #3c3f41;
-    --code-color: #a9b7c6;
+    --bg-color: #1e1e20; /* Soft charcoal dark grey background */
+    --card-bg: #252529; /* Card and surface background */
+    --text-color: #cccccc; /* Readable soft grey text */
+    --text-title: #ffffff; /* Crisp white titles/headings */
+    --text-muted: #8a8a8e; /* Muted grey details/comments */
+    --border-color: #333336; /* Subtle dark border line */
+    --accent-color: #dddddd; /* Soft off-white neutral accent */
+    --accent-hover: #ffffff;
+    --sidebar-bg: transparent; /* Flat clean sidebar */
+    --badge-bg: #2d2d31; /* Subtle dark badge background */
+    --badge-color: #aaaaaa; /* Muted badge text */
+    --code-bg: #18181a; /* Dark editor background */
+    --code-inline-bg: #252529; /* Inline code background */
+    --code-color: #cccccc;
   }
 
   html.theme-light {
-    --bg-color: #f2f2f2; /* IntelliJ Light background (off-white) */
-    --card-bg: #ffffff; /* White card layout */
-    --text-color: #1f1f1f; /* Near black text */
-    --text-title: #000000; /* Black headings */
-    --text-muted: #6e6e6e; /* Grey comments */
-    --border-color: #d1d1d1; /* Light grey grid borders */
-    --accent-color: #2f65ca; /* IntelliJ light blue accent */
-    --accent-hover: #1e3f84;
-    --sidebar-bg: #f5f5f5; /* Light grey sidebar panels */
-    --badge-bg: rgba(47, 101, 202, 0.08);
-    --badge-color: #2f65ca;
-    --code-bg: #ffffff;
-    --code-inline-bg: #e9ecef;
-    --code-color: #1f1f1f;
+    --bg-color: #f7f7f8; /* Warm off-white background */
+    --card-bg: #ffffff; /* Clean white card layout */
+    --text-color: #444446; /* Soft black text */
+    --text-title: #111112; /* Deep black titles/headings */
+    --text-muted: #8e8e93; /* Muted light grey details/comments */
+    --border-color: #e5e5ea; /* Soft light border line */
+    --accent-color: #222222; /* Neutral dark grey accent */
+    --accent-hover: #000000;
+    --sidebar-bg: transparent; /* Flat clean sidebar */
+    --badge-bg: #eaeaea; /* Light badge background */
+    --badge-color: #666666; /* Muted badge text */
+    --code-bg: #f5f5f7; /* Light code block background */
+    --code-inline-bg: #eaeaea; /* Inline code background */
+    --code-color: #222222;
   }
 
   /* Base Site Redesign */
@@ -244,9 +244,9 @@
   .archive__subtitle {
     font-size: 0.85rem !important;
     font-weight: 700 !important;
-    color: var(--accent-color) !important;
+    color: var(--text-muted) !important;
     border-bottom: none !important;
-    border-left: 3px solid var(--accent-color) !important;
+    border-left: 3px solid var(--text-muted) !important;
     padding-left: 10px !important;
     padding-bottom: 0 !important;
     margin-top: 0 !important;
@@ -388,19 +388,20 @@
     border-radius: 50% !important;
     border: 1px solid var(--border-color) !important;
     background-color: var(--card-bg) !important;
-    color: var(--text-title) !important;
+    color: var(--text-muted) !important;
     cursor: pointer !important;
     display: flex !important;
     align-items: center !important;
     justify-content: center !important;
-    box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important;
+    box-shadow: none !important;
     transition: background-color 0.25s, color 0.2s, transform 0.2s, border-color 0.25s !important;
     outline: none !important;
   }
 
   .theme-toggle-btn:hover {
-    transform: scale(1.08) !important;
+    transform: scale(1.04) !important;
     border-color: var(--accent-color) !important;
+    color: var(--text-title) !important;
   }
 
   .theme-toggle-btn i {
