@@ -1,0 +1,91 @@
+<!-- Insert custom sidebar style overrides -->
+<style>
+  /* Sidebar compact & clean overrides */
+  .sidebar {
+    overflow-y: visible !important;
+    overflow: visible !important;
+  }
+
+  /* Category details styling */
+  details.category-details {
+    margin-bottom: 0.3em !important;
+    padding: 0;
+    border: none;
+  }
+
+  details.category-details summary {
+    font-weight: 500 !important;
+    font-size: 0.9em !important;
+    color: #3d4144 !important;
+    outline: none;
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4px 6px;
+    border-radius: 4px;
+    cursor: pointer;
+    list-style: none !important;
+    list-style-type: none !important;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  details.category-details summary::-webkit-details-marker {
+    display: none !important;
+  }
+
+  details.category-details summary:hover {
+    background-color: #f6f8fa;
+    color: #000 !important;
+  }
+
+  /* Arrow indicator */
+  details.category-details summary::before {
+    content: "▸";
+    margin-right: 0.4em;
+    color: #7a8288;
+    display: inline-block;
+    transition: transform 0.2s ease;
+    font-size: 0.8em;
+  }
+
+  details.category-details[open] summary::before {
+    transform: rotate(90deg);
+  }
+
+  /* Category post list styling */
+  details.category-details ul.category-posts {
+    list-style: none !important;
+    padding-left: 1.1em !important;
+    margin: 0.2em 0 0.5em 0.4em !important;
+    border-left: 1px solid #e1e4e6 !important;
+  }
+
+  details.category-details ul.category-posts li {
+    margin-bottom: 0.25em !important;
+    list-style: none !important;
+    padding: 0 !important;
+  }
+
+  details.category-details ul.category-posts li a {
+    font-size: 0.82em !important;
+    color: #6a737d !important;
+    text-decoration: none !important;
+    display: block;
+    padding: 2px 0;
+    transition: color 0.2s ease;
+  }
+
+  details.category-details ul.category-posts li a:hover {
+    color: #24292e !important;
+  }
+
+  /* Count badge */
+  .category-count {
+    font-size: 0.75em;
+    background-color: #eff1f3;
+    padding: 1px 6px;
+    border-radius: 10px;
+    color: #586069;
+    font-weight: normal;
+  }
+</style>
