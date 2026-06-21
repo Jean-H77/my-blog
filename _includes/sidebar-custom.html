@@ -1,0 +1,49 @@
+<nav class="nav__list">
+  <label class="nav__title" style="margin-bottom: 0.5em; display: block; border-bottom: 1px solid #f2f3f3; padding-bottom: 0.5em; font-size: 1.1em; font-weight: bold; color: #3d4144;">Blog Categories</label>
+  <ul class="nav__items" style="list-style: none; padding-left: 0; margin-left: 0;">
+    {% for category in site.categories %}
+      {% assign category_name = category[0] %}
+      {% assign posts = category[1] %}
+      <li style="margin-bottom: 0.8em; list-style: none;">
+        <details class="category-details" style="cursor: pointer;" open>
+          <summary style="font-weight: 600; font-size: 0.95em; color: #494e52; outline: none; display: flex; justify-content: space-between; align-items: center; list-style: none; list-style-type: none;">
+            <span>{{ category_name | capitalize }}</span>
+            <span style="font-size: 0.8em; background-color: #f2f3f3; padding: 2px 8px; border-radius: 12px; color: #7a8288; font-weight: normal;">{{ posts.size }}</span>
+          </summary>
+          <ul style="padding-left: 1em; margin-top: 0.4em; list-style: none; border-left: 2px solid #f2f3f3; margin-left: 0.3em;">
+            {% for post in posts %}
+              <li style="margin-bottom: 0.4em; list-style: none;">
+                <a href="{{ post.url | relative_url }}" style="font-size: 0.85em; color: #7a8288; text-decoration: none; display: block; padding: 2px 0; transition: color 0.2s ease;">
+                  {{ post.title }}
+                </a>
+              </li>
+            {% endfor %}
+          </ul>
+        </details>
+      </li>
+    {% endfor %}
+  </ul>
+</nav>
+
+<style>
+  /* Standard details arrow styling overrides */
+  details.category-details summary::-webkit-details-marker {
+    display: none;
+  }
+  details.category-details summary {
+    display: flex;
+  }
+  details.category-details summary::before {
+    content: "▸";
+    margin-right: 0.5em;
+    color: #7a8288;
+    transition: transform 0.2s ease;
+  }
+  details.category-details[open] summary::before {
+    transform: rotate(90deg);
+    content: "▸";
+  }
+  details.category-details ul li a:hover {
+    color: #111111 !important;
+  }
+</style>
