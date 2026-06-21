@@ -478,6 +478,90 @@
   .theme-toggle-btn i {
     font-size: 1.15em !important;
   }
+
+  /* ===== Light Mode Syntax Highlighting (GitHub-inspired) ===== */
+  html.theme-light div.highlighter-rouge,
+  html.theme-light figure.highlight {
+    background: var(--code-bg) !important;
+    color: #24292e !important;
+  }
+  html.theme-light .highlight pre,
+  html.theme-light .highlight code {
+    color: #24292e !important;
+  }
+  html.theme-light .highlight .hll { background-color: #fffbdd !important; }
+  html.theme-light .highlight .c,
+  html.theme-light .highlight .cm,
+  html.theme-light .highlight .cp,
+  html.theme-light .highlight .c1,
+  html.theme-light .highlight .cs,
+  html.theme-light .highlight .sd { color: #6a737d !important; }             /* Comments */
+  html.theme-light .highlight .err { color: #b31d28 !important; }             /* Error */
+  html.theme-light .highlight .k,
+  html.theme-light .highlight .kc,
+  html.theme-light .highlight .kd,
+  html.theme-light .highlight .kn,
+  html.theme-light .highlight .kp,
+  html.theme-light .highlight .kr { color: #d73a49 !important; }              /* Keywords */
+  html.theme-light .highlight .kt { color: #005cc5 !important; }              /* Keyword.Type */
+  html.theme-light .highlight .l,
+  html.theme-light .highlight .m,
+  html.theme-light .highlight .mf,
+  html.theme-light .highlight .mh,
+  html.theme-light .highlight .mi,
+  html.theme-light .highlight .mo,
+  html.theme-light .highlight .il { color: #005cc5 !important; }              /* Numbers */
+  html.theme-light .highlight .s,
+  html.theme-light .highlight .sb,
+  html.theme-light .highlight .sc,
+  html.theme-light .highlight .s2,
+  html.theme-light .highlight .se,
+  html.theme-light .highlight .sh,
+  html.theme-light .highlight .si,
+  html.theme-light .highlight .sx,
+  html.theme-light .highlight .sr,
+  html.theme-light .highlight .s1,
+  html.theme-light .highlight .ss { color: #032f62 !important; }              /* Strings */
+  html.theme-light .highlight .na { color: #6f42c1 !important; }              /* Name.Attribute */
+  html.theme-light .highlight .nb { color: #005cc5 !important; }              /* Name.Builtin */
+  html.theme-light .highlight .nc { color: #6f42c1 !important; }              /* Name.Class */
+  html.theme-light .highlight .no { color: #005cc5 !important; }              /* Name.Constant */
+  html.theme-light .highlight .nd { color: #6f42c1 !important; }              /* Name.Decorator */
+  html.theme-light .highlight .ne { color: #005cc5 !important; }              /* Name.Exception */
+  html.theme-light .highlight .nf,
+  html.theme-light .highlight .nx { color: #6f42c1 !important; }              /* Name.Function / Other */
+  html.theme-light .highlight .ni,
+  html.theme-light .highlight .nl,
+  html.theme-light .highlight .py,
+  html.theme-light .highlight .bp { color: #24292e !important; }              /* Name defaults */
+  html.theme-light .highlight .n,
+  html.theme-light .highlight .p,
+  html.theme-light .highlight .w { color: #24292e !important; }               /* Name / Punctuation / Whitespace */
+  html.theme-light .highlight .nn { color: #005cc5 !important; }              /* Name.Namespace */
+  html.theme-light .highlight .nt { color: #22863a !important; }              /* Name.Tag */
+  html.theme-light .highlight .nv,
+  html.theme-light .highlight .vc,
+  html.theme-light .highlight .vg,
+  html.theme-light .highlight .vi { color: #e36209 !important; }              /* Variables */
+  html.theme-light .highlight .o,
+  html.theme-light .highlight .ow { color: #d73a49 !important; }              /* Operators */
+  html.theme-light .highlight .gd { color: #b31d28 !important; background-color: #ffeef0 !important; } /* Diff deleted */
+  html.theme-light .highlight .gi { color: #22863a !important; background-color: #f0fff4 !important; } /* Diff inserted */
+  html.theme-light .highlight .gh { color: #005cc5 !important; font-weight: bold !important; }
+  html.theme-light .highlight .gp { color: #6a737d !important; font-weight: bold !important; }
+  html.theme-light .highlight .gu { color: #005cc5 !important; font-weight: bold !important; }
+  html.theme-light .highlight .ld { color: #032f62 !important; }
+  html.theme-light .highlight table td.gutter,
+  html.theme-light .highlight table td.rouge-gutter {
+    color: #babbbd !important;
+    border-inline-end-color: #dfe2e5 !important;
+  }
+  /* Inline code in light mode */
+  html.theme-light :not(pre) > code {
+    background: var(--code-inline-bg) !important;
+    color: #24292e !important;
+  }
+
 </style>
 
 <script>
